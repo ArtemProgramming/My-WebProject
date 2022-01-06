@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;700;800&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;700&display=swap" rel="stylesheet">
+	<style>
+		:root{
+	--acient: #FB8F1D;
+	--grey: #7D7987;
+	--bg: #E5E5E5;
+}
+*{
+	box-sizing: border-box;
+}
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #E5E5E5;
+}
+select,
+button,
+a{
+	cursor: pointer;
+}
+.poin{
+	cursor: pointer;
+}
+.container{
+	width: 100%;
+}
+/*header*/
+.header-content{
+	margin:auto;
+	width: 1070px;
+	height: 150px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-family: 'Inter', sans-serif;
+}
+nav{
+	display: flex;
+	align-items: center;
+}
+nav ul{
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+nav li{
+	margin-right: 35px;
+	color: #B8BECD;
+	transition: .4s ease-out;
+	cursor: pointer;
+}
+nav li:hover{
+	color: #202336;
+}
+.header-content button{
+	border: 1px solid var(--acient);
+	box-sizing: border-box;
+	border-radius: 8px;
+	width: 132px;
+	height: 44px;
+	background-color: #E5E5E5;
+	transition: .4s ease-out;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--acient);
+	mix-blend-mode: normal
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 60px;
+}
+.header-content button:hover{
+	background-color: var(--acient);
+	color: #ffffff;
+	box-shadow: 0px 32px 34px rgba(255, 112, 59, 0.317827);
+	transition: .4s ease-out;
+}
+#btn-reg{
+	margin-left: 18px;
+	background-color: var(--acient);
+	color: #FFFFFF;
+	transition: .4s ease-out;
+}
+#btn-reg:hover{
+	background-color: #E5E5E5;
+	color: var(--acient);
+	box-shadow: 0px 32px 34px rgba(255, 112, 59, 0.317827);
+	transition: .4s ease-out;
+}
+
+.header-intro{
+	width: 1070px;
+	margin: 0 auto;
+	display: flex;
+}
+.header-left{
+	flex: 0 0 40%;
+}
+.header-left h1{
+	width: 356px;
+	font-family: Playfair Display;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 54px;
+	line-height: 60px;
+	color: #202336;
+}
+.header-left h3{
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 27px;
+	color: #202336;
+	position: relative;
+	padding-bottom: 40px;
+}
+.header-left h3::before{
+	content: "";
+	position: absolute;
+	width: 31px;
+	height: 2px;
+	top: 49px;
+	left: 0;
+	background-color: #202336;
+	border-radius: 4px;
+}
+.select-box{
+	width: 470px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.select-item{
+	width: 180px;
+	height: 50px;
+	border: 0.8px solid #AFB0B9;
+	border-radius: 6px;
+	padding:0 20px 0 20px;
+	opacity: 0.8;
+}
+.select-item option{
+	font-family: 'Inter', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 32px;
+	color: #4A4C53;
+	mix-blend-mode: normal;
+	margin-right: 10px;
+}
+.header-left button{
+	width: 180px;
+	height: 52px;
+	font-family: 'Mulish', sans-serif;
+	background-color: #FB8F1D;
+	border-radius: 8px;
+	border: none;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 17px;
+	line-height: 60px;
+	color: #FFFFFF;
+	mix-blend-mode: normal;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 51px;
+	transition: .4s ease-out;
+}
+.header-left button:hover{
+	background-color: var(--bg);
+	color: var(--acient);
+	box-shadow: 0px 32px 34px rgba(255, 112, 59, 0.317827);
+	transition: .4s ease-out;
+}
+#s-it1{
+	margin-right: 20px;
+}
+#s-it2{
+	margin-bottom: 25px;
+}
+#s-it3{
+	margin-right: 20px;
+}
+#s-it4{
+	margin-bottom: 25px;
+}
+.header-right{
+	flex: 0 0 60%;
+	position: relative;
+}
+.header-right img{
+	width: 95%;
+	position: absolute;
+	top: 20px;
+	left: 50px;
+}
+.article-one{
+	width: 1070px;
+	margin: 250px auto 0;
+	height: 550px;
+	display: flex;
+}
+.article-one-left{
+	flex: 0 0 50%;
+}
+.article-one-left img{
+	width: 100%;
+}
+.article-one-right{
+	flex: 0 0 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 80px;
+	margin-bottom: 100px;
+}
+.article-one-right h3{
+	width: 480px;
+	font-family: Playfair Display;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 40px;
+	color: #000000;
+	mix-blend-mode: normal;
+	margin: 0;
+}
+.article-one-right p {
+	width: 450px;
+	font-family: Mulish;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 17px;
+	line-height: 30px;
+	columns: var(--grey);
+	mix-blend-mode: normal;
+	margin-bottom: 40px;
+}
+.article-one-right button{
+	width: 164px;
+	height: 48px;
+	background-color: #FB8F1D;
+	border: none;
+	border-radius: 8px;
+	ont-family: Inter;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 60px;
+	color: #FFFFFF;
+	mix-blend-mode: normal;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: .4s ease-out;
+}
+.article-one-right button:hover{
+	background-color: var(--bg);
+	color: var(--acient);
+	box-shadow: 0px 32px 34px rgba(255, 112, 59, 0.317827);
+	transition: .4s ease-out;
+}
+.box-content{
+	width: 1070px;
+	margin: 170px auto 0;
+	height: 500px;
+}
+.box-one-content{
+	display: flex;
+	justify-content: space-between;
+}
+.box-one-top{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.box-one-top h3{
+	font-family: Playfair Display;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 50px;
+	color: #000000;
+	mix-blend-mode: normal;
+}
+.box-one-top a{
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 17px;
+	line-height: 60px;
+	display: flex;
+	align-items: center;
+	color: #FB8F1D;
+	mix-blend-mode: normal;
+	padding-right: 10px;
+	text-decoration: none;
+}
+.box-one-top a::after{
+	content: "";
+	margin-left: 8px;
+	width: 6px;
+	height: 12px;
+	background-image: url(img/icon/icon-it1.svg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.box-one-card{
+	width: 250px;
+	height: 320px;
+	overflow: hidden;
+	background: #C4C4C4;
+	border-radius: 8px;
+	position: relative;
+}
+.box-one-card img{
+	background-repeat: no-repeat;
+	background-size: 100%;
+	transition: .4s ease-out;
+}
+.box-one-card::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+	z-index: 9999;
+	opacity: 0;
+	transition: .4s ease-out;
+}
+.box-one-card:hover:before{
+	opacity: 1;
+}
+.box-one-card-decs{
+	width: 120px;
+	height: 56px;
+	padding: 0 0 5px 3px;
+	background-color: var(--bg);
+	border-radius: 0 6px 0 0;
+	color: #000000;
+	z-index: 9999;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	position: relative;
+	bottom: 68px;
+}
+.box-one-card-decs p{
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 17px;
+	color: #042521;
+	mix-blend-mode: normal;
+	margin: 0;
+	margin-bottom: 5px;
+}
+.box-one-card-decs b{
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	color: var(--grey);
+	mix-blend-mode: normal;
+}
+.article-two{
+	width: 1070px;
+	margin: 170px auto 0;
+	display: flex;
+}
+.article-two-left{
+	flex: 0 0 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.article-two-left h3{
+	width: 400px;
+	font-family: Playfair Display;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 40px;
+	color: #000000;
+	mix-blend-mode: normal;
+	margin-bottom: 15px;
+}
+.article-two-left p{
+	width: 450px;
+	font-family: Mulish;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 17px;
+	line-height: 30px;
+	color: #7D7987;
+	mix-blend-mode: normal;
+	margin-bottom: 45px;
+}
+.article-two-left button{
+	width: 164px;
+	height: 48px;
+	background-color: #FB8F1D;
+	border-radius: 8px;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 60px;
+	display: flex;
+	align-items: center;
+	color: #FFFFFF;
+	mix-blend-mode: normal;
+	transition: .4s ease-out;
+}
+.article-two-left button:hover{
+	background-color: var(--bg);
+	color: var(--acient);
+	box-shadow: 0px 32px 34px rgba(255, 112, 59, 0.317827);
+	transition: .4s ease-out;
+}
+.article-two-right{
+	flex: 0 0 50%;
+}
+.article-two-right img{
+	width: 100%;
+	position: relative;
+	right: 0;
+}
+.men-box{
+	width: 1070px;
+	height: 750px;
+	margin: 170px auto 0;
+	display: flex;
+}
+.men-box-left{
+	flex: 0 0 50%;
+}
+.men-box-left h3{
+	font-family: Playfair Display;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 44px;
+	line-height: 50px;
+/*	text-align: center;*/
+	color: #000000;
+	mix-blend-mode: normal;
+}
+.men-box-left h4{
+	margin-top: 40px;
+	font-family: Inter;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 22px;
+	line-height: 48px;
+	color: #000000;
+	mix-blend-mode: normal;
+	margin-bottom: 0;
+}
+.men-box-left b{
+	font-family: Inter;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 30px;
+	color: rgba(0, 0, 0, 0.85);
+	mix-blend-mode: normal;
+	margin-top: 0;
+}
+.men-box-star-box{
+	width: 190px;
+	margin-top: 105px;
+}
+.men-box-star-box img{
+	margin-right: 2px;
+	width: 25px;
+	height: 25px;
+}
+.men-box-left p{
+	margin-top: 34px;
+	width: 450px;
+	font-family: Mulish;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 36px;
+	color: #000000;
+	mix-blend-mode: normal;
+}
+.men-box-right{
+	flex: 0 0 50%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.men-box-right-content{
+	width: 384px;
+	height: 491px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
+}
+.men-box-right-content img{
+/*	background-color: #C4C4C4;*/
+	border-radius: 14px;
+}
+.box-one-card-decs-right{
+	width: 130px;
+	height: 290px;
+	padding: 20px 3px 5px 30px;
+	background-color: var(--bg);
+	border-radius: 6px 0 0 0;
+	color: #000000;
+	z-index: 9999;
+	display: flex;
+	flex-direction: row;
+	position: relative;
+    bottom: 65px;
+    right: -127px;
+}
+.box-one-card-decs-right img{
+	width: 40px;
+	height: 40px;
+}
+.box-one-card-decs-right #next-btn{
+	margin-left: 19px;
+}
+.box-content-two{
+	max-width: 1070px;
+	margin: 190px auto 0;
+}
+.box-content-two-intro{
+	margin: 20px auto 0;
+}
+.box-content-wrapper{
+	display:flex;
+	justify-content: space-between;
+}
+.box-content-two-card{
+	margin-right: 7px;
+	max-height: 450px;
+	width: 270px;
+	border-radius: 8px;
+}
+.img-box{
+	height: 50%;
+	width: 270px;
+	overflow: hidden;
+}
+.box-content-two-card img{
+	width: 100%;
+	background-size: cover;
+	border-radius: 8px;
+}
+.box-content-two-card h5{
+	font-family: Inter;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 19px;
+	line-height: 30px;
+	color: #000000;
+	mix-blend-mode: normal;
+	margin: 13px 0 13px 0;
+}
+.box-content-two-card p{
+	width: 266px;
+	font-family: Inter;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 26px;
+	color: #7D7987;
+	mix-blend-mode: normal;
+	margin: 0 0 0 23px 0;
+}
+.box-content-two-card a{
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 28px;
+	color: #FB8F1D;
+	mix-blend-mode: normal;
+	text-decoration: none;
+	margin: 0;
+}
+
+
+footer{
+	background-color: #F9F9FB;
+}
+.footer-content-wrapper{
+	width: 1070px;
+	margin: 270px auto 0;
+}
+.footer-content-box{
+	width: 1070px;
+	padding-top: 70px;
+	padding-bottom: 55px;
+	border-bottom: 0.6px solid #C4C4C4;
+	display: flex;
+	justify-content: space-between;
+}
+.block1{
+	width: 50%;
+}
+.block1 img{
+	width: 44px;
+	height: 44px;
+}
+.block1 p{
+	width: 330px;
+	font-family: Mulish;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 28px;
+	color: #848484;
+	mix-blend-mode: normal;
+	margin-bottom: 101.1px;
+}
+.block1 b{
+	font-family: Mulish;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 17px;
+	color: #848484;
+	mix-blend-mode: normal;
+}
+.block2{
+	width: 25%;
+}
+.block3{
+	width: 25%;
+}
+.block4{
+	width: 18.5%;
+}
+.footer-content-box p{
+	font-family: Mulish;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 22px;
+	color: #848484;
+	mix-blend-mode: normal;
+	cursor: pointer;
+}
+.footer-content-box h4{
+	font-family: Mulish;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 19px;
+	color: #000000;
+	mix-blend-mode: normal;
+}
+.footer-contact{
+	width: 1070px;
+	height: 75px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.footer-contact a{
+	margin-right: 28px;
+}
+.footer-contact a>img{
+	width: 25px;
+	height: 20px;
+}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="header-content">
+				<img src="img/icon/logo.svg" alt="">
+				<nav>
+					<ul>
+						<li>Home</li>
+						<li>Destinations</li>
+						<li>About</li>
+						<li>Partner</li>
+					</ul>
+					<button>Login</button>
+					<button id="btn-reg">Register</button>
+				</nav>
+			</div>
+			<div class="header-intro">
+				<div class="header-left">
+					<h1>Explore and Travel</h1>
+					<div class="header-finder">
+						<h3>Holiday finder</h3>
+						<div class="select-box">
+							<select name="num1" id="s-it1" class="select-item">
+								<option value="1"><b>Location</b></option>
+								<option value="2"></option>
+								<option value="3"></option>
+							</select>
+							<select name="num2" id="s-it2" class="select-item">
+								<option value="1"><b>Activity</b></option>
+								<option value="2"></option>
+								<option value="3"></option>
+							</select>
+							<select name="num3" id="s-it3" class="select-item">
+								<option value="1">Grade</option>
+								<option value="2"></option>
+								<option value="3"></option>
+							</select>
+							<select name="num4" id="s-it4" class="select-item">
+								<option value="1">Date</option>
+								<option value="2"></option>
+								<option value="3"></option>
+							</select>
+						</div>
+					</div>
+					<button>Explore</button>
+				</div>
+				<div class="header-right">
+					<img src="img/content/thousand-1.svg" alt="">
+				</div>
+			</div>
+		</div>
+	</header>
+	<section>
+		<div class="container">
+			<div class="article-one">
+				<div class="article-one-left">
+					<img src="img/content/Thousand-2.svg" alt="">
+				</div>
+				<div class="article-one-right">
+					<h3>A new way to explore the world</h3>
+					<p>For decades travellers have reached for Lonely Planet books when looking to plan and execute their perfect trip, but now, they can also let Lonely Planet Experiences lead the way</p>
+					<button>Learn more</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			<div class="box-content">
+				<div class="box-one-top">
+					<h3>Featured destinations</h3>
+					<a href="##">View al</a>
+				</div>
+				<div class="box-one-content">
+					<div class="box-one-card">
+						<img src="img/content/image1.png" alt="">
+						<div class="box-one-card-decs">
+							<p>Raja Ampat</p>
+							<b>Indonesia</b>
+						</div>
+					</div>
+					<div class="box-one-card">
+						<img src="img/content/image2.png" alt="">
+						<div class="box-one-card-decs">
+							<p>Fanjingshan</p>
+		s					<b>China</b>
+						</div>
+					</div>
+					<div class="box-one-card">
+						<img src="img/content/image3.png" alt="">
+						<div class="box-one-card-decs">
+							<p>Vevey</p>
+							<b>Switzerland</b>
+						</div>
+					</div>
+					<div class="box-one-card">
+						<img src="img/content/image4.png" alt="">
+						<div class="box-one-card-decs">
+							<p>Skadar</p>
+							<b>Montenegro</b>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			<div class="article-two">
+				<div class="article-two-left">
+					<h3>Guides by Thousand Sunny</h3>
+					<p>Packed with tips and advice from our on-the-ground experts, our city guides app (iOS and Android) is the ultimate resource before and during a trip.</p>
+					<button>Download</button>
+				</div>
+				<div class="article-two-right">
+					<img src="img/content/Thousand-3.svg" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			<div class="men-box">
+				<div class="men-box-left">
+					<h3>Testimonials</h3>
+					<div class="men-box-star-box">
+						<img src="img/icon/star.svg" alt="">
+						<img src="img/icon/star.svg" alt="">
+						<img src="img/icon/star.svg" alt="">
+						<img src="img/icon/star.svg" alt="">
+						<img src="img/icon/star.svg" alt="">
+					</div>
+					<p>“Quisque in lacus a urna fermentum euismod. Integer mi nibh, dapibus ac scelerisque eu, facilisis quis purus. Morbi blandit sit amet turpis nec”</p>
+					<h4>Edward Newgate</h4>
+					<b>Founder Circle</b>
+				</div>
+				<div class="men-box-right">
+					<div class="men-box-right-content">
+						<img src="img/content/image 6.png" alt="">
+						<div class="box-one-card-decs-right">
+							<img src="img/icon/previous.svg" alt="" class="poin">
+							<img src="img/icon/next.svg" alt="" id="next-btn" class="poin">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			<div class="box-content-two">
+				<div class="box-one-top"> <!-- использовал прошлые стили -->
+					<h3>Trending stories</h3>
+					<a href="##">View al</a>
+				</div>
+				<div class="box-content-two-intro">
+					<div class="box-content-wrapper">
+						<div class="box-content-two-card">
+							<div class="img-box">
+								<img src="img/content/image 12.png" alt="">
+							</div>
+							<h5>The many benefits of <br>taking a healing holiday</h5>
+							<p>‘Helaing holidays’ are on the rise tohelp maximise your health and happines...</p>
+							<a href="##">Read more</a>
+						</div>
+						<div class="box-content-two-card">
+							<div class="img-box">
+								<img src="img/content/image 13.png" alt="">
+							</div>
+							<h5>The best Kyoto restaurant<br> to try Japanese food</h5>
+							<p>From tofu to teahouses, here’s our guide to Kyoto’s best restaurants to visit...</p>
+							<a href="##">Read more</a>
+						</div>
+						<div class="box-content-two-card">
+							<div class="img-box">
+								<img src="img/content/image 14.png" alt="">
+							</div>
+							<h5>Skip Chichen Itza and head to this remote Yucatan</h5>
+							<p>It’s remote and challenging to get, but braving the jungle and exploring these ruins without the...</p>
+							<a href="##">Read more</a>
+						</div>
+						<div class="box-content-two-card">
+							<div class="img-box">
+								<img src="img/content/image 15.png" alt="">
+							</div>
+							<h5>Surf’s up at these beginner spots around the world</h5>
+							<p>If learning to surf has in on your to-do list for a while, the good news is: it’s never too late...</p>
+							<a href="##">Read more</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="container">
+			<div class="footer-content-wrapper">
+				<div class="footer-content-box">
+					<div class="block1">
+						<img src="img/icon/logo.svg" alt="">
+						<p>Plan and book your perfect trip with expert advice, travel tips destination information from us</p>
+						<b>©2020 Thousand Sunny. All rights reserved</b>
+					</div>
+					<div class="block2">
+						<h4>Destinations</h4>
+						<p>Africa</p>
+						<p>Antarctica</p>
+						<p>Asia</p>
+						<p>Europe</p>
+						<p>America</p>
+					</div>
+					<div class="block3">
+						<h4>Shop</h4>
+						<p>Destination Guides</p>
+						<p>Pictorial & Gifts</p>
+						<p>Special Offers</p>
+						<p>Delivery Times</p>
+						<p>FAQs</p>
+					</div>
+					<div class="block4">
+						<h4>Interests</h4>
+						<p>Adventure Travel</p>
+						<p>Art And Culture</p>
+						<p>Wildlife And Nature</p>
+						<p>Family Holidays</p>
+						<p>Food And Drink</p>
+					</div>
+			</div>
+				</div>
+			<div class="footer-contact">
+				<a href="##"><img src="img/icon/icon1.svg" alt=""></a>
+				<a href="##"><img src="img/icon/icon2.svg" alt=""></a>
+				<a href="##"><img src="img/icon/icon3.svg" alt=""></a>
+				<a href="##"><img src="img/icon/icon4.svg" alt=""></a>
+				<a href="##"><img src="img/icon/icon5.svg" alt=""></a>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
