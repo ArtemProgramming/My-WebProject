@@ -1,1 +1,1 @@
-alert('By ArtemG');
+
